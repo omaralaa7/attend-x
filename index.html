@@ -143,7 +143,7 @@ html[lang="ar"] .hero h1 { line-height: 1.25; }
 .step h3 { font-size: 18px; font-weight: 700; }
 .step p { color: var(--muted); font-size: 15px; }
 .step__shot { display: block; aspect-ratio: 4 / 3; border-radius: var(--r-md); overflow: hidden; border: 1px solid var(--line); background: radial-gradient(120% 90% at 50% 35%, #1D3566 0%, var(--navy-deep) 100%); }
-.step__shot img { width: 100%; height: 100%; object-fit: cover; object-position: 49% 50%; }
+.step__shot img { width: 100%; height: 100%; object-fit: cover; }
 .step__shot--fit img { object-fit: contain; padding: 8px; }
 .step__chart { display: grid; place-content: center; justify-items: center; gap: 12px; }
 .donut { position: relative; width: 56%; min-width: 96px; display: grid; place-items: center; }
@@ -370,7 +370,7 @@ html[lang="ar"] .plan__price b { font-family: var(--f-ar); }
         </div>
       </div>
       <div class="hero__visual">
-        <div class="stage3d hero__stage" id="heroStage"><img class="stage3d__poster" src="assets/device-hero.png" alt="" data-t-alt="hero_alt" width="1445" height="783" fetchpriority="high"></div>
+        <div class="stage3d hero__stage" id="heroStage"><img class="stage3d__poster" src="assets/device-hero.png" alt="" data-t-alt="hero_alt" width="1126" height="868" fetchpriority="high"></div>
         <div class="feed" aria-live="polite">
           <div class="feed__head">
             <div class="feed__course"><i class="feed__dot" aria-hidden="true"></i><span data-t="feed_live"></span> · <b>ELC 312</b></div>
@@ -401,8 +401,8 @@ html[lang="ar"] .plan__price b { font-family: var(--f-ar); }
       <div class="sec-head"><span class="eyebrow" data-t="how_eye"></span><h2 class="display" id="howT" data-t="how_t"></h2><p data-t="how_p"></p></div>
       <ol class="steps">
         <li class="step"><span class="step__n">1</span><h3 data-t="s1_t"></h3><p data-t="s1_p"></p><span class="step__shot"><img src="assets/step-register.png" alt="" data-t-alt="s1_alt" width="800" height="600" loading="lazy"></span></li>
-        <li class="step"><span class="step__n">2</span><h3 data-t="s2_t"></h3><p data-t="s2_p"></p><span class="step__shot"><img src="assets/device-pairing-code.png" alt="" data-t-alt="s2_alt" width="1701" height="465" loading="lazy"></span></li>
-        <li class="step"><span class="step__n">3</span><h3 data-t="s3_t"></h3><p data-t="s3_p"></p><span class="step__shot step__shot--fit"><img src="assets/device-present.png" alt="" data-t-alt="s3_alt" width="1445" height="783" loading="lazy"></span></li>
+        <li class="step"><span class="step__n">2</span><h3 data-t="s2_t"></h3><p data-t="s2_p"></p><span class="step__shot"><img src="assets/device-pairing-code.png" alt="" data-t-alt="s2_alt" width="1200" height="900" loading="lazy"></span></li>
+        <li class="step"><span class="step__n">3</span><h3 data-t="s3_t"></h3><p data-t="s3_p"></p><span class="step__shot step__shot--fit"><img src="assets/device-present.png" alt="" data-t-alt="s3_alt" width="1126" height="868" loading="lazy"></span></li>
         <li class="step"><span class="step__n">4</span><h3 data-t="s4_t"></h3><p data-t="s4_p"></p><span class="step__shot step__chart" role="img" data-t-aria="s4_alt">
           <span class="donut"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="42" fill="none" stroke="#F87171" stroke-width="13"/><circle cx="60" cy="60" r="42" fill="none" stroke="#4ADE80" stroke-width="13" stroke-dasharray="232.2 263.9" transform="rotate(-90 60 60)"/></svg><b id="donutPct"></b></span>
           <span class="donut__legend"><span><i style="background:#4ADE80"></i><span data-t="present"></span></span><span><i style="background:#F87171"></i><span data-t="absent"></span></span></span>
@@ -433,7 +433,7 @@ html[lang="ar"] .plan__price b { font-family: var(--f-ar); }
       <div class="sec-head" style="margin-bottom:28px"><span class="eyebrow" data-t="dev_eye"></span><h2 class="display" id="devT" data-t="dev_t"></h2><p data-t="dev_p"></p></div>
       <div class="viewer">
         <div class="stage3d viewer__stage" id="devStage">
-          <img class="stage3d__poster" src="assets/device-hero.png" data-fallback="assets/device-inside.png" alt="" data-t-alt="dev_alt" width="1445" height="783" loading="lazy">
+          <img class="stage3d__poster" src="assets/device-hero.png" data-fallback="assets/device-inside.png" alt="" data-t-alt="dev_alt" width="1126" height="868" loading="lazy">
           <div class="v3-labels" id="devLabels"></div>
           <span class="viewer__hint" data-t="v3_hint"></span>
         </div>
@@ -594,7 +594,7 @@ const T = {
   fact1: { en: "Check-in in about a second", ar: "تسجيل في حوالي ثانية" },
   fact2: { en: "Live reports from anywhere", ar: "تقارير لحظية من أي مكان" },
   fact3: { en: "Encrypted with HTTPS", ar: "بيانات مشفّرة بـ HTTPS" },
-  hero_alt: { en: "The Attend-X device: a black unit with the fingerprint sensor and status lights on top and a display on the front asking for a finger", ar: "جهاز أتند إكس: وحدة سوداء فوقها حساس البصمة ولمبات الحالة، وشاشة من قدام بتطلب البصمة" },
+  hero_alt: { en: "The Attend-X device: a black unit with the display and status lights on top and the fingerprint sensor on its side", ar: "جهاز أتند إكس: وحدة سوداء فوقها الشاشة ولمبات الحالة، وحساس البصمة في جنبها" },
   feed_live: { en: "Live attendance", ar: "الحضور الآن" },
   feed_cap: { en: "What the teacher or supervisor sees: each name appears the moment its owner touches the device.", ar: "ده اللي بيشوفه المدرس أو المشرف: كل اسم بيظهر في نفس لحظة بصمة صاحبه." },
   present: { en: "Present", ar: "حاضر" },
@@ -622,7 +622,7 @@ const T = {
   s1_alt: { en: "The admin platform's fingerprint registration screen", ar: "شاشة تسجيل البصمات في منصة الإدارة" },
   s3_alt: { en: "The Attend-X device with a green light and Present on its display", ar: "جهاز أتند إكس واللمبة الخضرا منورة والشاشة مكتوب عليها حاضر" },
   s4_alt: { en: "Example attendance chart: 88% present, 12% absent", ar: "مثال لرسم الحضور: ٨٨٪ حاضر و١٢٪ غائب" },
-  s2_alt: { en: "Front of the Attend-X device with the pairing code 452259 on its display", ar: "واجهة جهاز أتند إكس وعلى شاشته كود الربط 452259" },
+  s2_alt: { en: "The display on top of the Attend-X device showing the pairing code 452259", ar: "شاشة جهاز أتند إكس من فوق وعليها كود الربط 452259" },
   s3_t: { en: "One touch to check in", ar: "لمسة واحدة للتسجيل" },
   s3_p: { en: "Everyone places a finger on the sensor. A green light confirms the record.", ar: "كل شخص يحط صباعه على الحساس، واللمبة الخضرا تأكد التسجيل." },
   s4_t: { en: "Follow it live", ar: "تابع لحظة بلحظة" },
@@ -656,7 +656,7 @@ const T = {
   m_product: { en: "Product", ar: "المنتج" },
   m_inside: { en: "Inside", ar: "من الداخل" },
   v_hero: { en: "3/4", ar: "زاوية" },
-  v_front: { en: "Front", ar: "أمام" },
+  v_front: { en: "Side", ar: "جنب" },
   v_top: { en: "Top", ar: "أعلى" },
   v_back: { en: "Back", ar: "خلف" },
   t_labels: { en: "Labels", ar: "الأسماء" },
@@ -779,12 +779,12 @@ const FEATURES = [
 ];
 
 const PARTS = [
-  { icon: I.finger, t: { en: "Fingerprint sensor on top", ar: "حساس بصمة من فوق" }, p: { en: "Optical sensor. Reads a finger in about a second.", ar: "حساس ضوئي يقرأ البصمة في حوالي ثانية." } },
-  { icon: I.screen, t: { en: "Color display on the front", ar: "شاشة ملونة من قدام" }, p: { en: "Asks for a finger, then confirms with the person's name.", ar: "تطلب البصمة، وبعدها تأكد التسجيل باسم صاحبها." } },
+  { icon: I.screen, t: { en: "Color display on top", ar: "شاشة ملونة من فوق" }, p: { en: "Asks for a finger, then confirms with the person's name.", ar: "تطلب البصمة، وبعدها تأكد التسجيل باسم صاحبها." } },
+  { icon: I.finger, t: { en: "Fingerprint sensor on the side", ar: "حساس بصمة في الجنب" }, p: { en: "Optical sensor. Reads a finger in about a second.", ar: "حساس ضوئي يقرأ البصمة في حوالي ثانية." } },
   { icon: I.lights, t: { en: "Five status lights", ar: "خمس لمبات حالة" }, p: { en: "On top, so the result is clear from a distance.", ar: "من فوق، عشان النتيجة تبان من بعيد." } },
-  { icon: I.usb, t: { en: "USB-C charging", ar: "شحن USB-C" }, p: { en: "The charging port is on one end of the device.", ar: "فتحة الشحن في جنب الجهاز." } },
-  { icon: I.power, t: { en: "Slide power switch", ar: "زر تشغيل منزلق" }, p: { en: "On the back, out of the way.", ar: "في ضهر الجهاز، بعيد عن الإيد." } },
-  { icon: I.vents, t: { en: "Vents", ar: "فتحات تهوية" }, p: { en: "On the other end, to keep the electronics cool.", ar: "في الجنب التاني، عشان الإلكترونيات تفضل باردة." } },
+  { icon: I.usb, t: { en: "USB-C charging", ar: "شحن USB-C" }, p: { en: "The charging port is on the near end of the device.", ar: "فتحة الشحن في طرف الجهاز." } },
+  { icon: I.power, t: { en: "Slide power switch", ar: "زر تشغيل منزلق" }, p: { en: "On the side opposite the sensor, out of the way.", ar: "في الجنب المقابل للحساس، بعيد عن الإيد." } },
+  { icon: I.vents, t: { en: "Vents", ar: "فتحات تهوية" }, p: { en: "On the far end, to keep the electronics cool.", ar: "في الطرف التاني، عشان الإلكترونيات تفضل باردة." } },
   { icon: I.battery, t: { en: "18650 rechargeable battery", ar: "بطارية 18650 قابلة للشحن" }, p: { en: "Inside the case. Works anywhere in the room, no cable needed.", ar: "جوه العلبة. الجهاز يشتغل في أي مكان من غير سلك." } },
   { icon: I.chip, t: { en: "ESP32 with Wi-Fi", ar: "معالج ESP32 بالواي فاي" }, p: { en: "Connects the device to the online platform.", ar: "يربط الجهاز بالمنصة أونلاين." } }
 ];
